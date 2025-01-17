@@ -302,4 +302,20 @@
             } else if (e.key === 'ArrowDown') {
                 player1.dy = 8;
             } else if (e.key === 'Enter') {
-                gamePaused = !gamePaused
+                gamePaused = !gamePaused;
+            } else if (e.key === 'Delete') {
+                resetGame();
+            }
+        });
+
+        window.addEventListener('keyup', () => {
+            player1.dx = 0;
+            player1.dy = 0;
+        });
+
+        ballImage.onload = () => {
+            loop();
+        };
+    </script>
+</body>
+</html>
